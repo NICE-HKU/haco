@@ -1,0 +1,83 @@
+llm:
+
+
+  llm_type: openai-chat
+
+
+
+
+  model: gpt-4o-mini
+  temperature: 0
+  top_p: 1
+  frequency_penalty: 0.0
+agent:
+  agent_type: concurrent
+  agent_config_path: configs/agent_local.yaml
+  selection_strategy: random
+  bestone_epsilon: 0.15
+  bestone_min_call_count: 8
+
+  plan:
+
+
+    planning: True
+
+
+    planning_max_number: 7
+
+
+
+    image_name: my-jupyter-image-gpus
+
+  execution:
+
+
+    execution_max_number: 6
+
+  debug:
+
+
+    self_debug: True
+
+
+    debug_max_number: 8
+
+
+
+  max_step_number: 15
+
+
+
+  max_debug_by_step: 2
+
+
+code_executor:
+
+  use_docker: True
+
+  image_name: my-jupyter-image-gpus
+
+  use_proxy: True
+
+  use_gpu: True
+
+log:
+
+  users_log_path: log/workspace/users
+
+  sessions_log_path: log/data
+
+
+
+
+
+  sessions_log_path: log/data
+
+
+
+
+  experience_dir: evaluation/experimental_results/main/DSBench/local
+  result_dir: experimental_results/main/DSBench/local
+
+server:
+  port: 8007

@@ -1,0 +1,115 @@
+llm:
+
+
+  llm_type: openai-chat
+
+
+
+
+  model: gpt-4o-mini
+
+  temperature: 0.2
+  top_p: 1
+  frequency_penalty: 0.0
+agent:
+  agent_type: concurrent
+  agent_config_path: configs/agent.yaml
+  selection_strategy: haco
+
+  real_mode: false
+
+
+
+
+
+
+
+  network_mode: simulated
+  real_probe:
+    samples: 3
+    timeout_sec: 5.0
+    cache_ttl_sec: 30.0
+    fallback_latency_sec: 0.8
+  bestone_epsilon: 0.15
+  bestone_min_call_count: 8
+  haco:
+
+    reliability_target: 0.60
+
+    exploration_factor: 1.4
+
+    risk_aversion_factor: 0.5
+
+    jitter_penalty: 2.0
+
+    latency_discount_alpha: 0.5
+
+  plan:
+
+
+    planning: True
+
+
+    planning_max_number: 7
+
+  execution:
+
+
+    execution_max_number: 6
+
+  debug:
+
+
+    self_debug: True
+
+
+    debug_max_number: 8
+
+
+
+  max_step_number: 15
+
+
+
+  evaluation: False
+
+code_executor:
+
+
+  use_docker: True
+
+
+
+
+  use_proxy: True
+
+  use_gpu: True
+
+
+
+  image_name: my-jupyter-image
+
+
+log:
+
+
+
+
+
+  users_log_path: log/workspace/users
+
+
+
+
+
+
+  sessions_log_path: log/data
+
+
+
+
+  experience_dir: evaluation/experimental_results/tao/haco_0.60_0.5_1.4
+  result_dir: experimental_results/tao/haco_0.60_0.5_1.4
+
+server:
+  port: 8008

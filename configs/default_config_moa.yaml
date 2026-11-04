@@ -1,0 +1,108 @@
+llm:
+
+
+  llm_type: openai-chat
+
+
+
+
+  model: gpt-4o-mini
+
+  temperature: 0.2
+  top_p: 1
+  frequency_penalty: 0.0
+agent:
+  agent_type: concurrent
+  selection_strategy: moa
+  agent_config_path: configs/agent_real_badagent.yaml
+
+  real_mode: true
+
+
+
+
+
+
+
+  network_mode: real_probe
+  real_probe:
+    samples: 3
+    timeout_sec: 5.0
+    cache_ttl_sec: 30.0
+    fallback_latency_sec: 0.8
+  bestone_epsilon: 0.15
+  bestone_min_call_count: 8
+
+  plan:
+
+
+    planning: True
+
+
+    planning_max_number: 7
+
+  execution:
+
+
+    execution_max_number: 6
+
+  debug:
+
+
+    self_debug: True
+
+
+    debug_max_number: 8
+
+
+
+  max_step_number: 15
+
+
+
+  evaluation: False
+
+code_executor:
+
+
+  use_docker: True
+
+
+
+
+  use_proxy: True
+
+  use_gpu: True
+
+
+
+  image_name: my-jupyter-image
+
+
+log:
+
+
+
+
+
+  users_log_path: log/workspace/users
+
+
+
+
+
+
+  sessions_log_path: log/data
+
+
+
+
+
+
+  experience_dir: evaluation/experimental_results/real/MatplotBench_badagent/moa
+  result_dir: experimental_results/real/MatplotBench_badagent/moa
+
+
+
+server:
+  port: 8007

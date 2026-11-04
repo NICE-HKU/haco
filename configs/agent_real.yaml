@@ -1,0 +1,253 @@
+
+
+
+
+agent_configs:
+
+
+
+
+
+  router:
+    router:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "gpt-4.1-mini"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+  planner:
+
+    plan_us_east_us_gpt_5_1_chat:
+      zone: "Global"
+      llm_type: openai-chat
+      model: "gpt-5.1-chat"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+    plan_sweden_central_gpt_4o:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    plan_japan_east_gpt_4_1_mini:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "gpt-4.1-mini"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    plan_southeast_asia_gpt_4_1_nano:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4.1-nano"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+
+
+
+  coder:
+
+    coder_us_east_us_gpt_5_1_chat:
+      zone: "Global"
+      llm_type: openai-chat
+      model: "gpt-5.1-chat"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.2
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+    coder_sweden_central_gpt_4o:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.2
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+    coder_japan_east_gpt_4_1_mini:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "gpt-4.1-mini"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.2
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    coder_southeast_asia_gpt_4_1_nano:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4.1-nano"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.2
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+
+
+
+
+  debugger:
+
+    debug_us_east_us_gpt_5_1_chat:
+      zone: "Global"
+      llm_type: openai-chat
+      model: "gpt-5.1-chat"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    debug_sweden_central_gpt_4o:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+    debug_japan_east_gpt_4_1_mini:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "gpt-4.1-mini"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    debug_southeast_asia_gpt_4_1_nano:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4.1-nano"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+
+
+
+
+  filter:
+
+    filter_us_east_us_gpt_5_1_chat:
+      zone: "Global"
+      llm_type: openai-chat
+      model: "gpt-5.1-chat"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    filter_sweden_central_gpt_4o:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    filter_japan_east_gpt_4_1_mini:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "gpt-4.1-mini"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    filter_southeast_asia_gpt_4_1_nano:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4.1-nano"
+      base_url: "https://YOUR_AZURE_RESOURCE.cognitiveservices.azure.com/"
+      key: ""
+      version: "2024-12-01-preview"
+
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0

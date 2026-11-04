@@ -1,0 +1,133 @@
+
+
+
+
+network_topology:
+  zones: ["Global", "Regional", "Local"]
+
+  matrix:
+    Local_to_Local:     { base: 2,   jitter: 1,   bandwidth: 500, loss_rate: 0.0001  }
+    Local_to_Regional:  { base: 150, jitter: 30,  bandwidth: 50, loss_rate: 0.02  }
+    Local_to_Global:    { base: 800, jitter: 150, bandwidth: 10, loss_rate: 0.08  }
+
+    Regional_to_Regional: { base: 40,  jitter: 10,  bandwidth: 100, loss_rate: 0.005 }
+    Regional_to_Global:   { base: 350, jitter: 60,  bandwidth: 20, loss_rate: 0.01  }
+
+    Global_to_Global:     { base: 60,  jitter: 15,  bandwidth: 200, loss_rate: 0.001 }
+
+
+agent_configs:
+
+
+
+
+
+  router:
+    router:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "gpt-4o"
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+  planner:
+
+    plan_global_1:
+      zone: "Global"
+      llm_type: openai-chat
+      model: "gpt-4o"
+      failure_rate: 0.05
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+    plan_global_2:
+      zone: "Global"
+      llm_type: openai-chat
+      model: "gpt-4o"
+      failure_rate: 0.5
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    plan_regional_1:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o-mini"
+      failure_rate: 0.02
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+    plan_regional_2:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o-mini"
+      failure_rate: 0.1
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+    plan_local_1:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "meta-llama/llama-3.1-8b-instruct"
+      failure_rate: 0.001
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+    plan_local_2:
+      zone: "Local"
+      llm_type: openai-chat
+      model: "meta-llama/llama-3.1-8b-instruct"
+      failure_rate: 0.005
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+
+
+
+  coder:
+    coder_regional:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o-mini"
+      failure_rate: 0.05
+      temperature: 0.2
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+
+
+
+  debugger:
+
+    debug_regional_1:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o-mini"
+      failure_rate: 0.02
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
+
+
+
+
+
+
+  filter:
+    filter_regional:
+      zone: "Regional"
+      llm_type: openai-chat
+      model: "gpt-4o-mini"
+      failure_rate: 0.05
+      temperature: 0.0
+      top_p: 1
+      frequency_penalty: 0.0
