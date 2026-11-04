@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+**/api_key.txt
+**/url.txt
+**/__pycache__/
+*.py[cod]
+.DS_Store
